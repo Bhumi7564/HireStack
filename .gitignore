@@ -1,0 +1,50 @@
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+target/
+dist/
+dist-ssr/
+
+# Environment files (keep example templates)
+.env
+.env.*
+!.env.example
+*.local
+
+# Secrets and certificates
+*.pem
+*.key
+*.jks
+*.p12
+
+# IDE and editor files
+.idea/
+.vscode/
+*.suo
+*.sw?
+.DS_Store
+
+# Java / Maven
+*.class
+*.log
+
+# Uploaded files
+uploads/
+
+# Operating system files
+Thumbs.db
+
+# Debug and temporary files
+backend/*_err.log
+backend/*_run.log
+backend/*_test.log
+backend/backend-error.txt
+backend/startup-error.txt
+backend/startup-log.txt
+
+# Package manager backups
+*.backup

@@ -1,0 +1,23 @@
+#!/bin/sh
+# ----------------------------------------------------------------------------
+# Maven Wrapper Unix Script
+# ----------------------------------------------------------------------------
+set -e
+MAVEN_PROJECTBASEDIR="${0%/*}"
+MAVEN_WRAPPER_JAR="$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar"
+
+if [ ! -f "$MAVEN_WRAPPER_JAR" ]; then
+    mkdir -p "$MAVEN_PROJECTBASEDIR/.mvn/wrapper"
+    curl -o "$MAVEN_WRAPPER_JAR" https://repo.maven.apache.org/maven2/org/apache/maven/wrapper/maven-wrapper/3.2.0/maven-wrapper-3.2.0.jar
+fi
+
+if [ -z "$JAVACMD" ] ; then
+  if [ -n "$JAVA_HOME"  ] ; then
+    JAVACMD="$JAVA_HOME/bin/java"
+  else
+    JAVACMD="java"
+  fi
+fi
+
+exec "$JAVACMD" -Dmaven.multiModuleProjectDirectory="$MAVEN_PROJECTBASEDIR" -classpath "$MAVEN_WRAPPER_JAR" org.apache.maven.wrapper.MavenWrapperMain "$@"
+
